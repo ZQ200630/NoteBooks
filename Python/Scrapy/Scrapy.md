@@ -1,11 +1,11 @@
-### Spiders
+## Spiders
 ```python
 1. response.body --str #获取响应数据
 2. response.headers --dict #获取响应头
 3. response.status --int  #获取状态码
 ```
 
-### response.selector
+## Selector
 ```python
 response.xpath('')  --bytes  #xpath过滤
     xpath().extract()  #返回结果集
@@ -16,13 +16,14 @@ response.css('') --bytes  #css选择器,同上
 response.re('') #其结果不需要格式化
 ```
 
-### yield
+## Yield
 ```python
 1. yield scrapy.Response(url=, callback=)  #继续爬取网页数据
 2. yield items  #把item送给pipelines处理
 ```
 
-### item
+## Item
+
 ```python
 scrapy.Field()  #添加字段
 ```
@@ -55,11 +56,7 @@ BOT_NAME = 'tencent'
 
 SPIDER_MODULES = ['tencent.spiders']
 NEWSPIDER_MODULE = 'tencent.spiders'
-```
 
-
-​    
-```python
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'tencent (+http:#www.yourdomain.com)'  #更改request头, 避免403 Forbidden
 
